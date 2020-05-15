@@ -1,38 +1,135 @@
 .App {
-  text-align: center;
+  overflow: hidden;
+  width: 100vw;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.message-list {
+  padding: 5px;
+  width: 350px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 94vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.message {
+  padding: 5px;
+  border: solid 1px black;
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-template-rows: 33% 33% 33%;
+  margin-bottom: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.message-from {
+  /* color: orange; */
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+
+.message-subject {
+  /* color: blue; */
+  grid-column-start: 1;
+  grid-row-start: 2;
+}
+
+.message-preview {
+  /* color: red; */
+  grid-column-start: 1;
+  grid-row-start: 3;
+}
+
+.message-timestamp {
+  /* color: green; */
+  grid-column-start: 2;
+  grid-row-start: 1;
+  text-align: right;
+}
+
+.navigation {
+  padding-top: 10px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  height: 5vh;
 }
 
-.App-link {
-  color: #61dafb;
+.compose-btn {
+  height: 100%;
+  margin-right: 10px;
+  padding-top: 1px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.menu-btn {
+  height: 100%;
+  margin-left: 10px;
+}
+
+.sidebar {
+  height: 100vh;
+
+  padding: 5%;
+}
+
+.labeled-input {
+  display: flex;
+  justify-content: space-between;
+  border: solid 1px grey;
+  margin-bottom: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.labeled-input .label {
+  width: 20%;
+  text-align: right;
+}
+
+.labeled-input input {
+  width: 75%;
+}
+
+.compose {
+  padding: 5%;
+}
+
+.action-bar {
+  height: 25px;
+  border: solid 1px grey;
+  margin-bottom: 5px;
+}
+
+.compose textarea {
+  width: 100%;
+  height: 70vh;
+  border: solid 1px grey;
+  box-sizing: border-box;
+}
+
+.sidebar-option {
+  height: 25px;
+  width: 100%;
+  margin-bottom: 5px;
+  /* padding: 10px; */
+}
+
+.labeled-display {
+  display: flex;
+  justify-content: space-between;
+  border: solid 1px grey;
+  margin-bottom: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.labeled-display .contents {
+  width: 80%;
+  overflow: hidden;
+}
+
+.labeled-display .label {
+  width: 20%;
+  text-align: left;
+}
+
+.message-view {
+  padding : 5%;
 }
